@@ -7,7 +7,7 @@ export const isAuthenticated = (
   request: Request,
   response: Response,
   next: NextFunction,
-): void => {
+): NextFunction | void => {
   const authHeader = request.headers.authorization;
 
   if (!authHeader) {
